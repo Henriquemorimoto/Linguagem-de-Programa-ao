@@ -12,18 +12,18 @@ try
     echo "Conexão estabelecida com sucesso!";
     
     $sql = "SELECT * FROM posts";
-    $dado = $pdo->query(sql);
+    $dado = $pdo->query($sql);
     
-    if($dado->rowCount() > 0)
+    if($dado->rowCount() > 0) 
     {
-        echo "Há posts cadastrados";
+        echo "<h3>Há posts cadastrados</h3>";
     }
     else
     {
-        echo "Não há posts cadastrados";
+        echo "<h3>Não há posts cadastrados</h3>";
     }
 }
 catch(PDOExcption $e)
 {
-    echo "Falhou: ".$e->getMessage();
+    echo "<h2>Falhou: ".$e->getMessage()."</h2>";
 }

@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:dbname=blog;host=127.0.0.1";
+$dsn = "mysql:dbname=henriquebdd;host=127.0.0.1";
 $dbuser = "root";
 $dbpass = "";
 
@@ -17,6 +17,15 @@ try
     if($dado->rowCount() > 0) 
     {
         echo "<h3>Há posts cadastrados</h3>";
+        foreach($dado->fetchAll() as $post)
+    {
+        echo "<p><b>Título</b>: ".$post['titulo']."<br>";   
+        echo "<b>Autor</b>: <i>".$post['autor']."</i>";
+        echo " - <b>Data de criação</b>: ".$post['data_criado']."</p>";
+        echo "<p><b>Conteúdo:</b> <br>".$post['conteudo']."</p><br>";
+        echo "<hr>";
+            
+    }
     }
     else
     {

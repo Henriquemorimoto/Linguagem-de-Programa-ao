@@ -1,2 +1,2 @@
-# Linguagem-de-Programa-ao
+# Linguagem-de-Programaçao
 Aula com o Denny de LP
